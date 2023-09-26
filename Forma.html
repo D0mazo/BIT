@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+    }
+
+    form {
+        background-color: black;
+        color: white;
+        text-align: left;
+        margin: 0 auto;
+        padding: 20px;
+        width:50%;
+        line-height: 30px;
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    span {
+        color: purple;
+    }
+
+    h1 {
+        text-align: center !important;
+    }
+
+    p {
+        font-size: small !important;
+        text-align: center !important;
+    }
+
+    .inputarea{
+        margin: 70px auto;
+        width: 450px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid gray;
+        background-color: black;
+        outline: none;
+        width: 100%;
+    }
+
+    label{
+        border-bottom: 1px solid gray;
+        display: inline-block;
+        display: block;
+        width: 150%;
+        
+        line-height: 3;
+    }
+
+    .together{
+        display: flex;
+    }
+
+    .arrow {
+        padding: 10px 40px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-image: url("https://raw.githubusercontent.com/Juryioe/BIT/main/Form/arrow.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 48px 48px;
+    }
+
+    .send {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <form>
+        <article>
+            <h1>Fuel Your Brand’s Goals with <span>Beyond</span></h1>
+            <p>You will get a response within 24 hours. We will explain in details how we can help you fuel and grow
+                your brand within the stated budget.</p>
+        </article>
+        <div class="inputarea">
+            <div class="together"><label for="fname">Name</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+
+            <div class="together"><label for="eadress">Email Adress</label>
+                <input type="text" id="eadress" name="eadress">
+            </div>
+
+            <div class="together"><label for="pnumber">Phone Number</label>
+                <input type="text" id="pnumber" name="pnumber">
+            </div>
+
+            <div class="together"><label for="budget">Budget</label>
+                <input type="text" id="budget" name="budget">
+            </div>
+
+            <div class="together"><label for="goals">Goals</label>
+                <input type="text" id="goals" name="goals">
+            </div>
+
+        </div>
+        <div class="send">
+            <h3>Send Enquiry</h3>
+            <button class="arrow"></button>
+        </div>
+    </form>
+</body>
+
+</html>
