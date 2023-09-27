@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .image {
+            background-image: url("https://i.pinimg.com/736x/be/ed/15/beed1563733a6748873bc7ba65f3f82e.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: #242424;
+            display: flex;
+            margin: 100px 100px;
+            height: 800px;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .image {
+            background-color: #1a1a1a;
+            width: 300px;
+            height: 800px;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .form {
+            background-color: #242424;
+            margin-left: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
+        }
+
+        .text {
+            margin-top: 100px;
+        }
+
+        p {
+            color: gray !important;
+            font-style: small;
+        }
+
+        .share {
+            line-height: 2.5;
+
+        }
+
+        .fill {
+            width: 500px;
+            background-color: #242424;
+            border: 1px solid #3D3D3D;
+            outline: none;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+
+        }
+
+        input::placeholder {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            color: #7F7F7F;
+        }
+
+        .checkbox1{
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: #242424;
+            border: 1px solid #3D3D3D;
+            border-radius: 4px;
+            font-size: 22px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        input[type=checkbox]:checked{
+            background-color: black;
+            color:white;
+        }
+
+        label {
+            color: #7F7F7F;
+
+        }
+
+        .final {
+            background-color: #4B72C2;
+            color: white;
+            width: 180px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px 10px 10px 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        hr {
+            border: 1px solid #3D3D3D;
+        }
+
+        span {
+            color: #4B72C2;
+            margin-right: 10px;
+        }
+
+        p span {
+            margin-left: 10px;
+        }
+
+        .icon{
+            background-color: transparent;
+            border:none;
+            color:#4B72C2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image"></div>
+        <div class="form">
+            <div class="text">
+                <h1>Registracijos Forma</h1>
+                <p>Užpildykite visus laukelius, susikursite slaptažodį ir paspaudę "Tęskite",<br> galėsite tęsti.</p>
+            </div>
+            <div class="share">
+                <div><input class="fill" type="text" placeholder="Vardas"></div>
+                <div><input class="fill" type="text" placeholder="Pavardė"></div>
+                <div><input class="fill" type="text" placeholder="Telefono Numeris"></div>
+                <div><input class="fill" type="text" placeholder="El. pašto adresas"></div>
+                <div><input class="fill" type="password" placeholder="Slaptažodis"></div>
+                <div><input class="fill" type="password" placeholder="Pakartokite Slaptažodį"></div>
+                <div class="checkbox1"><input class="checkbox" type="checkbox" /><label>Patvirtinkite Slaptažodį</label></div>
+                <div><button class="final">Tęskite</button></div>
+                <hr>
+            </div>
+            <div>
+                <p>Jau turite profilį?<button  class="icon" style='font-size:16px'>Prisijunkite <i class='fas fa-arrow-right'></i></button></p>
+            </div>
+        </div>
+</body>
+
+</html>
