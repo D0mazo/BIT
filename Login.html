@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .middle {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 500px;
+        width: 1000px;
+    }
+
+    .middleLeft {
+        width: 500px;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .middleRight {
+        background-color: blueviolet;
+        width: 500px;
+        color: white;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .middleRight img {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 50%;
+    }
+
+    .textRight {
+        position: fixed;
+        box-sizing: border-box;
+        margin: 0;
+        z-index: 2;
+    }
+
+    input {
+        border: none;
+        outline: none;
+    }
+    input::placeholder{
+        border: none;    
+    }
+
+    i {
+        color: blueviolet;
+        margin-right: 10px;
+    }
+    hr{
+        border: 1.5px solid gray;
+    }
+    h2{
+        text-underline-offset: 0.2em;
+    }
+
+    button {
+        width: 100%;
+        background-color: blueviolet;
+        border: none;
+        color: white;
+        border-radius: 15px;
+        box-sizing: border-box;
+        overflow: visible;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: blueviolet;
+    }
+</style>
+
+<body>
+    <div class="middle">
+        <div class="middleLeft">
+            <h2><span style="text-decoration: underline; text-decoration-color: blueviolet; line-height: 1.5px;">Lo</span>gin</h2>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <input class="text" placeholder="Enter your mail">
+                <hr>
+
+            </div>
+            <div>
+                <i class='fa fa-lock'></i>
+                <input class="text" placeholder="Enter your password">
+                <hr>
+            </div>
+
+            <a href="#" style="margin-top: -20px;"><p>Forgot pasword?</p></a>
+            <div style="display: flex; flex-direction: column; justify-content:  center;"> <button>Login</button>
+                <div style="display: inline; text-align: center;">
+                    <p></p>
+                    <p>Don`t have account? <a href="#">Singup now</a></p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="middleRight"><img
+                src="https://i.pcmag.com/imagery/articles/02UuGiqVyewk1F4b1D6S3RK-16..v1643306274.jpg">
+            <div class="textRight">
+                <h2>Every new friend is a<br> new adventure.</h2>
+                <p>let`s get connected</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
