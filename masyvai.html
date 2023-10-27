@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasyvaiBasic</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function arrayOf30(length, min, max) {
+            const randomArray = [];
+
+            for (let i = 0; i < length; i++) {
+                randomArray.push(rand(min, max));
+            }
+
+            return randomArray;
+        }
+
+        const arrayLength = 30;
+        const minNumber = 5;
+        const maxNumber = 25;
+
+        const randomNumbers = arrayOf30(arrayLength, minNumber, maxNumber);
+
+        const count = randomNumbers.filter(number => number > 10).length;
+
+        //1
+        console.log(`Count of numbers greater than 10: ${count}`);
+        //2
+        const largestNumber = randomNumbers.reduce((max, number) => (number > max ? number : max), randomNumbers[0]);
+        console.log(`The largest number is: ${largestNumber}`);
+        //3
+
+        let sum = 0;
+
+        for (let i = 0; i < randomNumbers.length; i++) {
+            const number = randomNumbers[i];
+
+            if (number % 2 === 0) {
+
+                sum += number;
+            }
+        }
+
+        console.log(`Sum of even numbers: ${sum}`);
+        //4
+        
+        console.log(randomNumbers);
+    </script>
+</body>
+
+</html>

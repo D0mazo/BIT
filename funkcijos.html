@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunkcijosArvydas</title>
+</head>
+
+<body>
+    <script>
+        function text() {
+            return console.log("labas")
+        }
+        text();
+
+    </script>
+    <script>
+        function secondText(text, num) {
+            for (let i = 0; i < num; i++) {
+                console.log(text);
+            }
+        }
+
+        secondText("labas", 7);
+
+    </script>
+    <script>
+        function countDivisors(num) {
+            if (num <= 1) {
+                return 0;
+            }
+
+            let count = 0;
+            for (let i = 2; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+        const number = 13;
+        const divisorsCount = countDivisors(number);
+        console.log(`dalinasi iš sveikų skaičių be liekanos ${number} (išskyrus vieną ir patį save): ${divisorsCount}`);
+
+    </script>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function arrayOfRandomHundred(length, min, max) {
+            const randomArray = [];
+
+            for (let i = 0; i < length; i++) {
+                randomArray.push(rand(min, max));
+            }
+
+            return randomArray;
+        }
+
+        const arrayLength = 100;
+        const minNumber = 33;
+        const maxNumber = 77;
+
+        const randomNumbers = arrayOfRandomHundred(arrayLength, minNumber, maxNumber);
+        console.log(randomNumbers);
+    </script>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function isPrime(number) {
+            if (number <= 1) return false;
+            if (number <= 3) return true;
+            if (number % 2 === 0 || number % 3 === 0) return false;
+
+            let i = 5;
+            while (i * i <= number) {
+                if (number % i === 0 || number % (i + 2) === 0) return false;
+                i += 6;
+            }
+            return true;
+        }
+
+        const Length = 100;
+        const min = 333;
+        const max = 777;
+
+        const rNumbers = [];
+        const primeNumbers = [];
+
+        for (let i = 0; i < Length; i++) {
+            const randomNumber = rand(min, max);
+            rNumbers.push(randomNumber);
+            if (isPrime(randomNumber)) {
+                primeNumbers.push(randomNumber);
+            }
+        }
+
+        console.log("Random Numbers:", randomNumbers);
+        console.log("Prime Numbers:", primeNumbers);
+    </script>
+    <script>
+        function rand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateRandomArray() {
+            const length = rand(10, 20);
+            const array = [];
+            for (let i = 0; i < length; i++) {
+                array.push(rand(0, 10));
+            }
+            return array;
+        }
+
+        function generateArrays() {
+            const arrays = [];
+            const repetitions = rand(10, 30);
+            for (let i = 0; i < repetitions - 1; i++) {
+                arrays.push(generateRandomArray());
+            }
+            const lastArray = generateRandomArray();
+            lastArray[lastArray.length - 1] = 0;
+            arrays.push(lastArray);
+            return arrays;
+        }
+
+        const randomArrays = generateArrays();
+        console.log(randomArrays);
+    </script>
+    <script>
+        function isPrime(number) {
+            if (number <= 1) return false;
+            if (number <= 3) return true;
+            if (number % 2 === 0 || number % 3 === 0) return false;
+
+            let i = 5;
+            while (i * i <= number) {
+                if (number % i === 0 || number % (i + 2) === 0) return false;
+                i += 6;
+            }
+            return true;
+        }
+
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateArrayWithPrimes() {
+            const array = [];
+            let nonPrimeCount = 0;
+
+            while (nonPrimeCount < 3) {
+                const randomNumber = generateRandomNumber(1, 33);
+                array.push(randomNumber);
+                if (!isPrime(randomNumber)) {
+                    nonPrimeCount++;
+                }
+            }
+
+            return array;
+        }
+
+        const finalArray = generateArrayWithPrimes();
+        console.log(finalArray);
+    </script>
+    <script>
+        function isPrime(number) {
+            if (number <= 1) return false;
+            if (number <= 3) return true;
+            if (number % 2 === 0 || number % 3 === 0) return false;
+
+            let i = 5;
+            while (i * i <= number) {
+                if (number % i === 0 || number % (i + 2) === 0) return false;
+                i += 6;
+            }
+            return true;
+        }
+
+        function generateRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateRandomArray(size, min, max) {
+            const array = [];
+            for (let i = 0; i < size; i++) {
+                array.push(generateRandomNumber(min, max));
+            }
+            return array;
+        }
+
+        function calculateAverage(array) {
+            const sum = array.reduce((acc, value) => acc + value, 0);
+            return sum / array.length;
+        }
+
+        function addThreeToSmallest(array) {
+            const smallestNumber = Math.min(...array);
+            const index = array.indexOf(smallestNumber);
+            array[index] += 3;
+        }
+
+        function generateArrayOfArrays() {
+            const outerArray = [];
+            for (let i = 0; i < 10; i++) {
+                outerArray.push(generateRandomArray(10, 1, 100));
+            }
+            return outerArray;
+        }
+
+        function main() {
+            let finallArray = generateArrayOfArrays();
+            let primeNumbers = finallArray.flat().filter(isPrime);
+            let average = calculateAverage(primeNumbers);
+
+            while (average < 70) {
+                addThreeToSmallest(finallArray.flat());
+                primeNumbers = finallArray.flat().filter(isPrime);
+                average = calculateAverage(primeNumbers);
+            }
+
+            return finallArray;
+        }
+
+        const finallArray = main();
+        console.log(finallArray);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objektyviniai Uzdaviniai</title>
+</head>
+
+<body>
+    <script>
+        //pirma užduotis
+        class Kibiras1 {
+            constructor(number) {
+                this.number = number;
+                this.akmenuKiekis = 0;
+            }
+
+            prideti1Akmeni() {
+                this.akmenuKiekis++;
+            }
+
+            pridetiDaugAkmenu(kiekis) {
+                this.akmenuKiekis += kiekis;
+            }
+
+            kiekPririnktaAkmenu() {
+                console.log(`Akmenų kiekis kibire Nr. ${this.number}: ${this.akmenuKiekis}`);
+            }
+        }
+
+        const kibiras1 = new Kibiras1(1);
+        const kibiras2 = new Kibiras1(2);
+        const kibiras3 = new Kibiras1(3);
+
+        kibiras2.prideti1Akmeni();
+        kibiras2.prideti1Akmeni();
+        kibiras2.prideti1Akmeni();
+        kibiras3.prideti1Akmeni();
+
+        kibiras1.pridetiDaugAkmenu(10);
+
+        kibiras1.kiekPririnktaAkmenu();
+        kibiras2.kiekPririnktaAkmenu();
+        kibiras3.kiekPririnktaAkmenu();
+    </script>
+
+
+    <script>
+        //antra užduotis
+        class Piniginė {
+    constructor() {
+        this.metaliniaiPinigai = 0;
+        this.popieriniaiPinigai = 0;
+    }
+
+    idetiPinigu(pinigas) {
+        if (pinigas <= 2) {
+            this.metaliniaiPinigai += pinigas;
+        }
+        else {
+            this.popieriniaiPinigai += pinigas;
+        }
+    }
+
+    skaiciuoti() {
+        this.suma = this.metaliniaiPinigai + this.popieriniaiPinigai; 
+        console.log(`Suma: ${this.suma}`);
+    }
+}
+
+const pinigine = new Piniginė();
+
+pinigine.idetiPinigu(2);
+pinigine.idetiPinigu(2);
+pinigine.idetiPinigu(1);
+pinigine.idetiPinigu(2);
+pinigine.idetiPinigu(1);
+pinigine.idetiPinigu(5);
+pinigine.idetiPinigu(15);
+pinigine.idetiPinigu(25);
+
+pinigine.skaiciuoti();
+</script>
+
+<script>
+ class Troleibusas {
+    constructor() {
+        this.KeleiviuSkaicius = 0;
+    }
+
+    ilipa(keleiviuSkaicius) {
+        this.KeleiviuSkaicius += keleiviuSkaicius;
+    }
+
+    islipa(keleiviuSkaicius) {
+        this.KeleiviuSkaicius -= keleiviuSkaicius;
+    }
+
+    bendrasKeleiviuSkaicius() {
+        if (this.KeleiviuSkaicius < 0) {
+            console.log("Autobusas niekur nevaziuos");
+        } else {
+            console.log(`${this.KeleiviuSkaicius} keleiviai vaziuoja autobusu`);
+        }
+    }
+}
+
+const autobusas = new Troleibusas();
+autobusas.ilipa(5); 
+autobusas.ilipa(8); 
+autobusas.ilipa(3); 
+autobusas.ilipa(8); 
+
+autobusas.islipa(2); 
+autobusas.islipa(6); 
+autobusas.islipa(4); 
+autobusas.islipa(2); 
+
+autobusas.bendrasKeleiviuSkaicius();
+
+</script>
+</body>
+
+</html>
